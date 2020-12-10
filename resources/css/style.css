@@ -1,0 +1,709 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* website look and feel good qm */
+
+
+
+/* ---------------------- basic setup -------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', 'sans-serif';
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix { zoom:1 }
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ---------------------- Reusable components -------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 70px 0;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #ffc134;
+    padding-bottom: 1px;
+    -webkit-transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+    border-bottom: 1px solid #ffc134;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* ---------------------- header style -------------------------- */
+
+/* class go down the items tree in order qm */
+header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))),  url("img/hero.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url("img/hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url("img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.logo-black,
+.logo {
+    float: left;
+    height: 100px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.logo-black {
+    display: none;
+}
+
+.main-nav{
+    margin-top: 50px;
+    float: right;
+    list-style: none;
+}
+
+/*all li elements inside main-nav selector */
+.main-nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s ease-in-out;
+    -o-transition: border-bottom 0.2s ease-in-out;
+    transition: border-bottom 0.2s ease-in-out;
+    padding-bottom: 5px;
+}
+/* to animate it we need to exist before we hover it (the border-bottom) qm */
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #ffc134;
+}
+
+.mobile-nav-icon {
+    display: none;
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.mobile-nav-icon ion-icon {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* sticky-nav */
+.sticky{
+    position: fixed;
+    top: 0;
+    /*left: 0;*/
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 1;
+/*    z-index is vertical elements stacking qm qm*/
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 15px 0;
+    color: #555;
+}
+
+.sticky .main-nav {
+    margin-top: 20px;
+
+}
+
+.sticky .logo {
+    display: none;
+}
+
+.sticky .logo-black {
+    display: block;
+    width: 50px;
+    height: auto;
+    margin: 5px 0;
+}
+
+
+h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 200%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: auto;
+}
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    margin: 15px 10px 0px 0;
+    display: inline-block;
+    padding: 10px 30px 12px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    border: 1.5px solid #ffc134;
+    -webkit-transition: background-color 0.2s, color 0.2s, border 0.2s;
+    -o-transition: background-color 0.2s, color 0.2s, border 0.2s;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+    background-color: #ffc134;
+    color: #fff;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: #ffc134;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    background-color: #efa600;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* ---------------------- Features Section -------------------------- */
+
+/* change the display to block so we center using margin */
+.icon-big {
+    font-size: 350%;
+    display: block;
+    margin: auto;
+    color: #ffc134;
+}
+
+h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #ffc134;
+    content: "";
+    width: 150px;
+    margin: 30px auto;
+}
+
+.long-copy {
+    line-height: 135%;
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.box {
+    padding: 2%;
+}
+
+/* text-align:center centers the text within the context qm */
+h3{
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 110%;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* ---------------------- Favorite Meals Section -------------------------- */
+
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+    height: auto;
+}
+
+.meal-photo {
+    /* width 100% means it have the exact width of it's parent qm */
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    -o-transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+/* ---------------------- How it works Section -------------------------- */
+
+/*.img {*/
+/*    width: 100%;*/
+/*}*/
+
+/*experiments /answer Q's qm*/
+
+.section-steps {
+    background-color: #f6f6f6;
+}
+
+.steps-box {
+    margin-top: 30px;
+}
+
+.steps-box:first-child {
+    text-align: center;
+    padding-right: 3%;
+}
+/* text align work for all inline block elements and img is one of them */
+/* percentages for fluid(responsivness) elemnts qm */
+
+.steps-box:last-child {
+    margin-top: 40px;
+    padding-left: 3%;
+    padding-right: 10%;
+}
+
+.app-screen {
+    width: 60%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div {
+    color: #ffc134;
+    border: 2px solid #ffc134;
+    display: inline-block;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding-top: 5px;
+    float: left;
+    margin-right: 25px;
+    font-size: 150%;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.btn-app:link,
+.brn-app:visited {
+    border: 0;
+}
+
+/* ---------------------- Cities Section -------------------------- */
+
+.box img{
+    width: 100%;
+}
+
+.city-feature {
+    line-height: 145%;
+}
+
+.icon-small{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #ffc134;
+    margin-right: 1%;
+
+    /*font-size: 20px !important;*/
+
+    /*ways to align vertically*/
+    /*vertical-align: center;*/
+    /*line-height: 120%;*/
+    /*margin-bottom: -2px;*/
+}
+
+/* ---------------------- Testimonials Section -------------------------- */
+
+.section-testimonials {
+    background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("./img/back-customers.jpg");
+    background-image:-o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./img/back-customers.jpg");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./img/back-customers.jpg");
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -10px;
+}
+
+blockquote {
+    margin-top: 40px;
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+}
+
+cite {
+    display: block;
+    font-size: 90%;
+    margin-top: 25px;
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* ---------------------- Sign Up Section -------------------------- */
+
+.section-plans {
+    background-color: #f6f6f6;
+    padding: 80px 0;
+}
+
+.plan-box {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 90%;
+    margin: auto;
+    -webkit-box-shadow: 0 2px 2px #ececec;
+    box-shadow: 0 2px 2px #ececec;
+    /*    xoffset yoffset blur and color shadow values   */
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border-bottom: none;
+
+}
+
+.plan-box div:last-child a {
+    margin: 0;
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #ffc134;
+    /* color used to draw attention to something qm */
+}
+
+.plan-price span {
+    font-size: 50%;
+    font-weight: 300;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    list-style-type: none;
+}
+
+.plan-box ul li {
+    line-height: 145%;
+    padding: 5px 0;
+}
+
+/* ---------------------- Contact-Form Section -------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 95%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.checkbox {
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.checkbox input {
+    margin-right: 7px;
+
+}
+
+*:focus {
+    outline: none;
+}
+
+/*cant padding a checkbox input qm it trys to do it inside the box qm*/
+
+textarea {
+    height: 100px;
+}
+
+/* seperate and analyse how to style elements qm */
+
+/* ---------------------- Footer Section -------------------------- */
+
+/* personal essai */
+
+/*footer {*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*}*/
+
+/*.footer-nav {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.footer-nav li {*/
+/*    display: inline-block;*/
+/*    list-style-type: none;*/
+/*    margin: 15px 5px;*/
+/*}*/
+
+/*.footer-nav li a:hover {*/
+/*    color: white;*/
+/*}*/
+
+/*.social-links {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.social-links li {*/
+/*    display: inline-block;*/
+/*    list-style-type: none;*/
+/*    margin: 15px 5px;*/
+/*}*/
+
+/*footer .row:last-child p {*/
+/*    text-align: center;*/
+/*    margin: 5px 0 35px 0;*/
+/*}*/
+
+/* course essai */
+
+footer {
+    background-color: #333;
+    padding: 20px;
+}
+
+
+.footer-nav {
+    list-style-type: none;
+    float: left;
+}
+
+.social-links {
+    list-style-type: none;
+    /*alternative to long one (but consistancy neded if one used qm )*/
+    /*list-style: none;*/
+    float: right;
+}
+
+
+/* first row was center auto despite +20 margin on elements side qm */
+.social-links li,
+.footer-nav li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    border: none;
+    color: #888;
+    font-size: 90%;
+    -webkit-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+
+/* because we don't want to stand footer buttons too much qm */
+/* level of color subtlness counts qm qm qm */
+/* course design qm rules qm */
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a :visited {
+    font-size: 100%;
+}
+
+.fb,
+.twitter,
+.gplus,
+.ig{
+    -webkit-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+
+.fb:hover,
+.fb:active{
+    color: #3b5998;
+}
+
+.twitter:hover,
+.twitter:active{
+    color: #55acee;
+}
+
+.gplus:hover,
+.gplus:active{
+    color: #dd4b39;
+}
+
+.ig:hover,
+.ig:active{
+    color: #e95950;
+}
+
+
+footer p{
+    color: #888;
+    text-align: center;
+    font-size: 70%;
+    margin-top: 30px;
+}
+
+/* ---------------------- Animation -------------------------- */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3{
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js--wp-1 .animate__animated,
+.js--wp-2 .animate__animated,
+.js--wp-3 .animate__animated{
+    opacity: 1;
+}
