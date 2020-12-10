@@ -514,6 +514,10 @@ cite img {
     font-size: 80%;
 }
 
+.plan-price-month {
+    margin-left: 10px;
+}
+
 .plan-box ul {
     list-style-type: none;
 }
